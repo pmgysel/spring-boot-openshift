@@ -10,7 +10,7 @@ public class PingRestController {
 
   @RequestMapping(method = RequestMethod.GET, path = "/api/ping")
   public ResponseEntity<String> getPing() {
-    return ResponseEntity.ok("pong!\n");
+    return ResponseEntity.ok("pong!!\n");
   }
 
 }
