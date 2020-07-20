@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: spring-example-route
+  namespace: <YOUR_OPENSHIFT_NAMESPACE>
+spec:
+  to:
+    kind: Service
+    name: spring-example-service
+  port:
+    targetPort: 8080

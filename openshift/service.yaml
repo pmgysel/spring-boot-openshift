@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-example-service
+  namespace: <YOUR_OPENSHIFT_NAMESPACE>
+spec:
+  selector:
+    app: spring-example
+  ports:
+    - port: 8080
+      targetPort: 8080

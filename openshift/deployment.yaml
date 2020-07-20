@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-example-deployment
+  namespace: <YOUR_OPENSHIFT_NAMESPACE>
+spec:
+  selector:
+    matchLabels:
+      app: spring-example
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spring-example
+    spec:
+      containers:
+      - name: spring-example
+        image: <YOUR_IMAGE_URL_AND_NAME>
+        ports:
+        - containerPort: 8080
