@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-example-deployment
+spec:
+  selector:
+    matchLabels:
+      app: spring-example
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spring-example
+    spec:
+      containers:
+      - name: spring-example
+        image: spring-boot-openshift:0.0.1
+        ports:
+        - containerPort: 8080
